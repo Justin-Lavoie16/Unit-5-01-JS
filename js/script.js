@@ -4,18 +4,26 @@ if (navigator.serviceWorker) {
   })
 }
 
-;("use strict")
+"use strict"
 
-function calculate() {
-  const length = parseInt(document.getElementById("pay").value)
-  const width = parseInt(document.getElementById("pay2").value)
+const randomNumber = Math.floor(Math.random() * 6) + 1;
 
-  const area = length * width * 0.18
-  const perimeter = length * width * (1.0 - 0.18)
-  const TAX_RATE = 0.18
+function myButtonClicked() {
+  document.getElementById("answer").innerHTML =
+    "<p>Value is: " + slider.value + "</p>"
+}
 
-  document.getElementById("area").innerHTML =
-    "The governemnt will take: " + area + "$"
-  document.getElementById("perimeter").innerHTML =
-    "your pay will be: " + perimeter + "$"
+function updateSliderValue(valueFromSlider) {
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+
+  if (valueFromSlider == randomNumber) {
+    document.getElementById("answer").innerHTML =
+      "the answer was, " + randomNumber + "!" + " You got it! Good job."
+  }
+
+    if (valueFromSlider != randomNumber) {
+    document.getElementById("answer").innerHTML =
+      "the answer was, " + randomNumber + "!" + " Nice Guess! but try again."
+  }
+  
 }
