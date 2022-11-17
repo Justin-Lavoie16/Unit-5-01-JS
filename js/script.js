@@ -4,9 +4,9 @@ if (navigator.serviceWorker) {
   })
 }
 
-"use strict"
+;("use strict")
 
-const randomNumber = Math.floor(Math.random() * 6) + 1;
+const randomNumber = Math.floor(Math.random() * 6) + 1
 
 function myButtonClicked() {
   document.getElementById("answer").innerHTML =
@@ -21,9 +21,8 @@ function updateSliderValue(valueFromSlider) {
       "the answer was, " + randomNumber + "!" + " You got it! Good job."
   }
 
-    if (valueFromSlider != randomNumber) {
+  if (valueFromSlider != randomNumber) {
     document.getElementById("answer").innerHTML =
       "the answer was, " + randomNumber + "!" + " Nice Guess! but try again."
   }
-  
 }

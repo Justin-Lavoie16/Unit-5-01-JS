@@ -54,17 +54,28 @@
       </header>
       <main class="mdl-layout__content">
         <p></p>
-        <img src="./images/notebook-animation.svg" alt="Computer" width="25%" height="25%">
+        <img
+          src="./images/notebook-animation.svg"
+          alt="Computer"
+          width="25%"
+          height="25%"
+        />
         <p></p>
         <div id="slider-value">
-    <span class="mdl-layout-title">Guess a number 1-6</span>
-        </div>  
+          <span class="mdl-layout-title">Guess a number 1-6</span>
+        </div>
         <label>
-          
           Slider's Value
-          <input id = "slider" class="mdl-slider mdl-js-slider" type="range"
-          min="0" max="6" value="2" tabindex="0"
-          onchange = "updateSliderValue(this.value)">
+          <input
+            id="slider"
+            class="mdl-slider mdl-js-slider"
+            type="range"
+            min="0"
+            max="6"
+            value="2"
+            tabindex="0"
+            onchange="updateSliderValue(this.value)"
+          />
         </label>
         <p></p>
         <div id="answer"></div>
